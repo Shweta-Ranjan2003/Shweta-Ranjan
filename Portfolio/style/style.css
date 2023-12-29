@@ -1,0 +1,242 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+#main{
+    background-color: rgb(93, 14, 250);
+}
+#minobject{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+    z-index: 99;
+    transition: all cubic-bezier(0.10,1,0.22,1) 1s;
+}
+/* GENERAL STYLES */
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+/* CSS VARIABLES */
+:root {
+    /* font */
+    --F-COLOR: #fff;
+    --F-PURPLE: rgb(93, 14, 250);
+
+    /* colors */
+}
+
+/* STYLING NAVBAR */
+header {
+    padding: 1.5rem 2rem;
+    z-index: 100;
+    backdrop-filter: blur(100px);
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu li a {
+    color: var(--F-COLOR);
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: rgb(255, 255, 255);
+    transition: all .3s ease-out;
+}
+
+.menu li a:hover::after {
+    width: 100%;
+}
+
+.nav-head h2 {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+
+.nav-head h2 span {
+    font-weight: bold;
+}
+
+.nav-head h2 a {
+    color: var(--F-COLOR);
+    text-decoration: none;
+}
+
+.nav-btn button {
+    padding: 8px 18px;
+    border-radius: 4px;
+    border: 1px solid rgb(255, 255, 255);
+    font-weight: 600;
+    color: var(--F-COLOR);
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    transition: all .3s ease-out;
+}
+
+.nav-btn button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100px);
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transition: all .3s ease-out;
+}
+
+.nav-btn button:hover::after {
+    transform: translateX(0);
+}
+
+.nav-btn button:hover {
+    color: var(--F-PURPLE);
+}
+
+/* STYLING HOME SECTION */
+
+#home {
+    background-color: rgb(93, 14, 250);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.home-container h1 {
+    font-size: 6vw;
+    color: white;
+    text-align: center;
+}
+
+.home-btn button {
+    padding: 12px 18px;
+    color: var(--F-PURPLE);
+    border-radius: 2px;
+    background-color: white;
+    border: 1px solid white;
+    font-size: 1.3rem;
+    font-weight: 200;
+    transition: all .3s ease-in;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.home-btn button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--F-PURPLE);
+    width: 100%;
+    height: 100%;
+    transform: translateX(-250px);
+    transition: all .3s ease-out;
+    z-index: -1;
+}
+
+.home-btn button:hover::after {
+    transform: translateX(0);
+}
+
+.home-btn button:hover {
+    letter-spacing: 1.2px;
+    font-weight: 500;
+    color: white;
+}
+.big-container{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 3rem;
+}
+
+/* STYLING ABOUT SECTION */
+#about {
+    background-color: rgb(29, 25, 38);
+    width: 100%;
+    height: 100vh;
+    padding-top: 2rem;
+    color: var(--F-COLOR);
+}
+
+.sec-container {
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.container-img {
+    width: 90%;
+    height: 90%;
+}
+
+.container-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.container-parah {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container-parah h4 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--F-PURPLE);
+}
+
+.container-parah h2 {
+    font-size: 4vw;
+}
+
+.floating-heading {
+    display: flex;
+}
